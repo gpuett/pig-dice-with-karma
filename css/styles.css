@@ -6,8 +6,38 @@
   display: none;
 }
 
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  min-height: 800px;
+  text-align: center;
+}
+
+body {
+  background-image: url(../img/pig.png);
+}
+
 .dice-faces {
   width: 50%;
   height: 50%;
   display: none;
+  border-radius: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control {
+  max-width: 300px;
+
+}
+
+#dice {
+  margin-top: 20px;
+}
+
+#dice button {
+  margin: auto;
+  width: 100px;
+  display: block;
+  margin-bottom: 20px;
 }

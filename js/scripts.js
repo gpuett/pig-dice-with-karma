@@ -13,8 +13,8 @@ function rollDice(){
   return (Math.floor(Math.random() * 6)) + 1;
 }
 
-var player1 = new Player("Garnett");
-var player2 = new Player("Brea");
+var player1 = new Player("Player 1");
+var player2 = new Player("Player 2");
 
 var currentPlayer = player1;
 
@@ -48,10 +48,26 @@ function play(){
 
 
 $(document).ready(function() {
+  $("#nameCapture").submit(function(event) {
+    event.preventDefault();
+    player1.name = $("#name1").val();
+    player2.name = $("#name2").val();
+    $("#p1").text(player1.name);
+    $("#p2").text(player2.name);
+    $("#nameCapture").hide();
+  });
+  $("#hold").hide();
   $("#roll").click(function(event) {
     event.preventDefault();
     $("#dice p").empty();
     $(".dice-faces").hide();
+    if (currentPlayer === player2) {
+      $("#p1").removeClass("highlight");
+      $("#p2").addClass("highlight");
+    } else {
+      $("#p2").removeClass("highlight");
+      $("#p1").addClass("highlight");
+    }
     var points = play();
     $("#gif").show();
     setTimeout(function(){
@@ -62,16 +78,11 @@ $(document).ready(function() {
     $("#p1TurnPoints").text(player1.turnPoints);
     $("#p2TotalPoints").text(player2.totalPoints);
     $("#p2TurnPoints").text(player2.turnPoints);
-    if (currentPlayer === player2) {
-      $("#p1").removeClass("highlight");
-      $("#p2").addClass("highlight");
-    } else {
-      $("#p2").removeClass("highlight");
-      $("#p1").addClass("highlight");
-    }
+    $("#hold").show();
   });
   $("#hold").click(function(event) {
     event.preventDefault();
+    $("#hold").hide();
     sumPoints();
     switchPlayer();
   });
