@@ -11,11 +11,12 @@
     <div class="container">
       <form id="nameCapture">
         <label for="name1">Player 1 name</label>
-        <input type="text" class="form-control" id="name1">
+        <input type="text" class="form-control" id="name1" required>
         <label for="name2">Player 2 name</label>
-        <input type="text" class="form-control" id="name2">
+        <input type="text" class="form-control" id="name2" required>
         <br>
-        <button type="submit" class="btn btn-success">Submit names</button>
+        <button type="submit" class="btn btn-danger">Submit names</button>
+        <!-- <button type="button" id="cpu" class="btn btn-danger">Play CPU</button> -->
       </form>
       <h1>Pig Dice</h1>
         <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":<br></p>
@@ -31,7 +32,7 @@
         </div>
         <div class="col col-md" id="dice">
           <div class="row">
-            <button type="button" id="roll" class="btn btn-primary">Roll Dice</button>
+            <button type="button" id="roll" class="btn btn-danger">Roll Dice</button>
             <button type="button" id="hold" class="btn btn-danger">Hold</button>
           </div>
           <div class="row">
