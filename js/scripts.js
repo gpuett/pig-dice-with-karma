@@ -39,9 +39,10 @@ function play(){
   }
   else {
     currentPlayer.addRollPoints(rollPoints);
+    if (currentPlayer.totalPoints + currentPlayer.turnPoints >= 100) {
+      alert(currentPlayer.name + " wins!");
+    }
   }
-  console.log(player1);
-  console.log(player2);
   return rollPoints;
 }
 
