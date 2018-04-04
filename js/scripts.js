@@ -43,6 +43,7 @@ function play(){
     currentPlayer.addRollPoints(rollPoints);
     if (currentPlayer.totalPoints + currentPlayer.turnPoints >= 100) {
       alert(currentPlayer.name + " wins!");
+      location.reload();
     }
   }
   return rollPoints;
