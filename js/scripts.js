@@ -50,8 +50,14 @@ function play(){
 $(document).ready(function() {
   $("#roll").click(function(event) {
     event.preventDefault();
+    $("#dice p").empty();
+    $(".dice-faces").hide();
     var points = play();
-    $("#dice p").text(points);
+    $("#gif").show();
+    setTimeout(function(){
+      $("#gif").hide();
+      $("#face-" + points).show();
+    }, 1000);
     $("#p1TotalPoints").text(player1.totalPoints);
     $("#p1TurnPoints").text(player1.turnPoints);
     $("#p2TotalPoints").text(player2.totalPoints);

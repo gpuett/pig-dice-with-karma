@@ -1,3 +1,13 @@
 .highlight {
   color: red;
 }
+
+#gif {
+  display: none;
+}
+
+.dice-faces {
+  width: 50%;
+  height: 50%;
+  display: none;
+}
