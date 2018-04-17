@@ -1,5 +1,4 @@
 import { Player } from './pig-dice';
-import { rollDice } from './pig-dice';
 import { switchPlayer } from './pig-dice';
 import { play } from './pig-dice';
 import { sumPoints } from './pig-dice';
@@ -12,6 +11,7 @@ var player1 = new Player("Player 1");
 var player2 = new Player("Player 2");
 
 var currentPlayer = player1;
+
 
 function gameTurn(){
   $("#dice p").empty();

@@ -17,9 +17,9 @@ input {
   text-align: center;
 }
 
-body {
+/*body {
   background-image: url(../img/pig.png);
-}
+}*/
 
 .dice-faces {
   width: 50%;

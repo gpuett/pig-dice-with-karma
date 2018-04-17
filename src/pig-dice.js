@@ -10,7 +10,7 @@ Player.prototype.addRollPoints = function (points) {
 };
 
 
-export function rollDice(){
+function rollDice(){
   return (Math.floor(Math.random() * 6)) + 1;
 }
 
