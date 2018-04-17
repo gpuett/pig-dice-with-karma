@@ -1,0 +1,48 @@
+{
+  "name": "pig-dice",
+  "version": "1.0.0",
+  "description": "| Spec | Input | Output | | :-------------     | :------------- | :------------- | |**The program will roll a virtual dice**| \"press roll\" | \"1-6\" | |**The program will assign a point value to each dice face**| \"roll 3\" | \"3 points\" | |**The program will allow for multiple rolls**| \"roll 2\" | \"continue\" | |**The program will end the player turn on a roll of one**| \"roll 1\" | \"end turn\" | |**The program will sum the points of the current turn**| \"roll 4, roll 3\" | \"points: 7\" | |**The program will wipe the points of the current turn if a 1 is rolled**| \"roll 5, roll 1\" | \"points: 0\" | |**The program will allow user to hold to end current turn**| \"roll 6, roll 2, hold\" | \"points: 8, end turn\" | |**On a hold, the program will add turn points to total**| \"roll 6, hold\" | \"Add 6 to player total\" | |**The program will allow for two players and switch after each turn**| \"end turn\" | \"next player turn\" | |**The program will assign a winner to the first player to reach 100 points**| \"points 100\" | \"win\" |",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js",
+    "build": "webpack --mode development",
+    "start": "npm run build; webpack-dev-server --open --mode development",
+    "lint": "eslint src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpuett/pig-dice-with-karma.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gpuett/pig-dice-with-karma/issues"
+  },
+  "homepage": "https://github.com/gpuett/pig-dice-with-karma#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.0.6",
+    "jasmine": "^3.1.0",
+    "jasmine-core": "^2.99.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-jquery": "^0.2.2",
+    "karma-webpack": "^2.0.13",
+    "style-loader": "^0.20.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}
